@@ -1,14 +1,14 @@
 import { StyleSheet, View } from "react-native";
-import { Image } from 'expo-image';
+import ImageViewer from '@/components/ImageViewer';
 
 const PlaceholderImage = require('../../assets/images/a0c55db70393bea13a4746c8aab145c8.jpg');
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <view style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
-      </view>
+      <View style={styles.imageContainer}>
+        <ImageViewer imgSource={PlaceholderImage} />
+      </View>
     </View>
   );
 }
