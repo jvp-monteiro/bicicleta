@@ -1,7 +1,7 @@
+import ImageViewer from "@/components/ImageViewer";
 import { StyleSheet, View } from "react-native";
-import ImageViewer from '@/components/ImageViewer';
 
-const PlaceholderImage = require('../../assets/images/a0c55db70393bea13a4746c8aab145c8.jpg');
+const PlaceholderImage = require("../../assets/images/tarmac.webp");
 
 export default function Index() {
   return (
@@ -15,16 +15,16 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
-        flex: 1,
-        backgroundColor: '#25292e',
-        alignItems: "center",
-      },
-      imageContainer: {
-        flex: 1,
-      },
-      image: {
-        width: 320,
-        height: 440,
-        borderRadius: 18,
-      },
+    flex: 1,
+    backgroundColor: "#6e6e6e",
+    alignItems: "center",
+  },
+  imageContainer: {
+    flex: 1,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+  },
 });
