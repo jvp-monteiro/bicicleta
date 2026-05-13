@@ -1,12 +1,11 @@
 import React from "react";
 import {
-    Button,
-    FlatList,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  FlatList,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { useTarefas } from "../hooks/useTarefas";
 
@@ -25,7 +24,13 @@ export default function App() {
           value={novaTarefa}
           onChangeText={setNovaTarefa}
         />
-        <Button title="Adicionar" onPress={adicionarTarefa} />
+        <TouchableOpacity
+          style={styles.botaoAdicionar}
+          onPress={adicionarTarefa}
+          activeOpacity={0.7}
+        >
+          <Text style={styles.botaoTexto}>Adicionar</Text>
+        </TouchableOpacity>
       </View>
 
       <FlatList
@@ -57,7 +62,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     borderWidth: 1,
-    borderColor: "#38BDF8",
+    borderColor: "#b3b9bb",
     backgroundColor: "#0E1320",
     color: "#E5E7EB",
     padding: 10,
@@ -77,4 +82,20 @@ const styles = StyleSheet.create({
   },
   tarefaTexto: { fontSize: 16, color: "#E5E7EB" },
   remover: { fontSize: 18, color: "#A855F7" },
+  botaoAdicionar: {
+    backgroundColor: "#757575",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: "#757575",
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  botaoTexto: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
 });

@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
     },
     imagePlaceholder: {
-        backgroundColor: '#4A90E2',
+        backgroundColor: '#23262a',
         height: 120,
         justifyContent: 'center',
         alignItems: 'center',
@@ -131,6 +131,6 @@ const styles = StyleSheet.create({
     preco: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#4A90E2',
+        color: '#000000',
     },
 });
